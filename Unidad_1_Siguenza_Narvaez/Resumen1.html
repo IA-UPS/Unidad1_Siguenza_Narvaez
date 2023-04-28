@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Juan_Narvaez_Daniela_Siguenza">
+
+<title>Informe_Dinamico</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Resumen1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Resumen1_files/libs/quarto-html/quarto.js"></script>
+<script src="Resumen1_files/libs/quarto-html/popper.min.js"></script>
+<script src="Resumen1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Resumen1_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Resumen1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Resumen1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Resumen1_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Resumen1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Resumen1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Informe_Dinamico</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Juan_Narvaez_Daniela_Siguenza </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="capítulo-1-introducción-al-aprendizaje-automático" class="level2">
+<h2 class="anchored" data-anchor-id="capítulo-1-introducción-al-aprendizaje-automático">Capítulo 1: <strong>Introducción al aprendizaje automático</strong></h2>
+<section id="orígenes-del-aprendizaje-automático" class="level3">
+<h3 class="anchored" data-anchor-id="orígenes-del-aprendizaje-automático"><strong>Orígenes del aprendizaje automático</strong></h3>
+<p>El campo de estudio interesado en el desarrollo de algoritmos informáticos para la transformación de datos en acciones inteligentes se conoce como aprendizaje automático. Este campo se originó en un entorno donde los datos disponibles, los métodos estadísticos y el poder de cómputo evolucionaron rápida y simultáneamente. Esto creó un ciclo de avance que permitió recopilar datos aún más grandes e interesantes, además el procesamiento de datos está conectado con el aprendizaje automático.</p>
+<p><img src="images/diagrama1.png" class="img-fluid"></p>
+</section>
+<section id="usos-y-abusos-del-aprendizaje-automático" class="level3">
+<h3 class="anchored" data-anchor-id="usos-y-abusos-del-aprendizaje-automático"><strong>Usos y abusos del aprendizaje automático</strong></h3>
+<p>El aprendizaje automático está principalmente interesado en dar sentido a los datos complejos, siendo una misión ampliamente aplicable y en gran medida independiente de la aplicación, ejemplos de esto puede ser:</p>
+<p>• Predecir los resultados de las elecciones</p>
+<p>• Identifique y filtre los mensajes de spam del correo electrónico</p>
+<p>• Prever actividad delictiva</p>
+<p>• Automatice las señales de tráfico de acuerdo con las condiciones de la carretera</p>
+<p>• Producir estimaciones financieras de tormentas y desastres naturales</p>
+<p>• Examinar la rotación de clientes</p>
+<p>• Crea aviones de pilotaje automático y coches de conducción automática.</p>
+<p>• Identificar personas con capacidad para donar</p>
+<p>• Dirigir la publicidad a tipos específicos de consumidores</p>
+</section>
+<section id="consideraciones-éticas" class="level3">
+<h3 class="anchored" data-anchor-id="consideraciones-éticas"><strong>Consideraciones éticas</strong></h3>
+<p>Se debe tener precaución al obtener o analizar datos para evitar infringir leyes, violar términos de servicio o acuerdos de uso de datos, abusar de la confianza o violar la privacidad de los clientes o del público, ya que aparte de las consecuencias legales, el uso inapropiado de los datos puede perjudicar sus resultados. Los clientes pueden sentirse incómodos o asustados si se hacen públicos aspectos de sus vidas que consideran privados.</p>
+<section id="cómo-aprenden-las-máquinas" class="level4">
+<h4 class="anchored" data-anchor-id="cómo-aprenden-las-máquinas"><strong>¿Cómo aprenden las máquinas?</strong></h4>
+<p>La definición propuesta por un científico dice que una máquina aprende si es capaz de tomar experiencia y utilizarla de tal manera que su rendimiento mejore en experiencias similares en el futuro. Esta definición es bastante exacta, pero dice poco sobre cómo las técnicas de aprendizaje automático realmente aprenden a transformar los datos en conocimiento procesable.</p>
+<p>El proceso básico de aprendizaje se puede dividir en tres componentes de la siguiente manera:</p>
+<p>• Entrada de datos: utiliza la observación, el almacenamiento de memoria y el recuerdo para proporcionar una base fáctica para un razonamiento posterior.</p>
+<p>• Abstracción: Implica la traducción de datos en representaciones más amplias.</p>
+<p>• Generalización: utiliza datos abstractos para formar una base para la acción.</p>
+<p><img src="images/diagrama2.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="abstracción-y-representación-del-conocimiento" class="level3">
+<h3 class="anchored" data-anchor-id="abstracción-y-representación-del-conocimiento"><strong>Abstracción y representación del conocimiento</strong></h3>
+<p>La representación de datos de entrada sin procesar en un formato estructurado es la tarea por excelencia para un algoritmo de aprendizaje. Antes de este punto, los datos son simplemente unos y ceros en un disco o en la memoria; no tienen significado. El trabajo de asignar un significado a los datos ocurre durante la abstracción. Mientras que, las conexiones abstractas son la base de representación del conocimiento, la formación de estructuras lógicas que ayudan a convertir la información sensorial en bruto en una percepción significativa.</p>
+<p>Durante el proceso de representación del conocimiento, la computadora resume las entradas sin procesar en un modelo, una descripción explícita de los patrones estructurados entre los datos y el proceso de ajustar un modelo particular a un conjunto de datos se conoce como capacitación.</p>
+</section>
+<section id="generalización" class="level3">
+<h3 class="anchored" data-anchor-id="generalización"><strong>Generalización</strong></h3>
+<p>El término generalización describe el proceso de convertir el conocimiento abstracto en una forma que se puede utilizar para la acción. La generalización es un proceso algo vago que es un poco difícil de describir.</p>
+<p>Los algoritmos de aprendizaje automático generalmente emplean atajos que dividen más rápidamente el conjunto de conceptos. Con este fin, el algoritmo empleará heurística, o conjeturas informadas sobre dónde encontrar los conceptos más importantes. Las heurísticas empleadas por los algoritmos de aprendizaje automático también dan lugar a veces a conclusiones erróneas. Si las conclusiones son sistemáticamente imprecisas, se dice que el algoritmo tiene una inclinación.</p>
+<p>Por ejemplo, suponga que un algoritmo de aprendizaje automático aprendió a identificar caras al encontrar dos círculos u ojos, colocados uno al lado del otro sobre una línea para la boca. Entonces, el algoritmo podría tener problemas con las caras que no se ajustan a su modelo o estar sesgado contra ellas.</p>
+<p><img src="images/diagrama3.png" class="img-fluid"></p>
+</section>
+<section id="evaluar-el-éxito-del-aprendizaje" class="level3">
+<h3 class="anchored" data-anchor-id="evaluar-el-éxito-del-aprendizaje"><strong>Evaluar el éxito del aprendizaje</strong></h3>
+<p>Una vez que un modelo ha sido entrenado en un conjunto de datos inicial, el modelo se prueba en un nuevo conjunto de datos y se juzga en qué medida su caracterización de los datos de entrenamiento se generaliza a los nuevos datos; el hecho de que los modelos no generalicen perfectamente se debe al problema de ruido, o variaciones inexplicables en los datos. Los datos ruidosos son causados por eventos aparentemente aleatorios, como:</p>
+<p>• Error de medición debido a sensores imprecisos que a veces suman o restan un bit de la lectura.</p>
+<p>• Problemas con los datos de informes, como que los encuestados informen respuestas aleatorias a las preguntas de la encuesta para terminar más rápido.</p>
+<p>• Errores causados cuando los datos se registran incorrectamente, incluidos valores faltantes, nulos, truncados, codificados incorrectamente o dañados.</p>
+<p>Se dice que un modelo que parece funcionar bien durante el entrenamiento, pero lo hace mal durante las pruebas está sobre ajustado al conjunto de datos de entrenamiento, ya que no se generaliza bien.</p>
+</section>
+<section id="pasos-para-aplicar-el-aprendizaje-automático-a-sus-datos" class="level3">
+<h3 class="anchored" data-anchor-id="pasos-para-aplicar-el-aprendizaje-automático-a-sus-datos"><strong>Pasos para aplicar el aprendizaje automático a sus datos</strong></h3>
+<p>1.Recolectando datos: &nbsp;datos escritos en papel, registrados en archivos de texto y hojas de cálculo, o almacenados en una base de datos SQL, deberá recopilarlos en un formato electrónico adecuado para el análisis.</p>
+<p>2.Exploración y preparación de los datos: Este paso en el proceso de aprendizaje automático tiende a requerir una gran cantidad de intervención humana. Una estadística citada a menudo sugiere que el 80 por ciento del esfuerzo en el aprendizaje automático se dedica a los datos. Gran parte de este tiempo se dedica a aprender más sobre los datos y sus matices durante una práctica llamada exploración de datos.</p>
+<p>3.Entrenamiento de un modelo en los datos: Para cuando los datos hayan sido preparados para el análisis, es probable que tenga una idea de lo que espera aprender de los datos. La tarea específica de aprendizaje automático informará la selección de un algoritmo apropiado, y el algoritmo representará los datos en forma de modelo.</p>
+<p>4.Evaluación del rendimiento del modelo: Debido a que cada modelo de aprendizaje automático es importante evaluar qué tan bien aprendió el algoritmo a partir de su experiencia. Según el tipo de modelo utilizado, es posible que pueda evaluar la precisión del modelo mediante un conjunto de datos de prueba o que necesite desarrollar medidas de rendimiento específicas para la aplicación prevista.</p>
+<p>5.Mejora del rendimiento del modelo: Si se necesita un mejor rendimiento, se hace necesario utilizar estrategias más avanzadas para aumentar el rendimiento del modelo. Es posible que deba complementar sus datos con datos adicionales o realizar un trabajo preparatorio adicional como en el paso dos de este proceso.</p>
+</section>
+<section id="elegir-un-algoritmo-de-aprendizaje-automático" class="level3">
+<h3 class="anchored" data-anchor-id="elegir-un-algoritmo-de-aprendizaje-automático"><strong>Elegir un algoritmo de aprendizaje automático</strong></h3>
+<p>Elegir un algoritmo de aprendizaje automático implica hacer coincidir las características de los datos que se van a aprender con los sesgos de los enfoques disponibles. Dado que la elección de un algoritmo de aprendizaje automático depende en gran medida del tipo de datos que está analizando y de la tarea propuesta en cuestión.</p>
+</section>
+<section id="pensando-en-los-datos-de-entrada" class="level3">
+<h3 class="anchored" data-anchor-id="pensando-en-los-datos-de-entrada"><strong>Pensando en los datos de entrada</strong></h3>
+<p>Todos los algoritmos de aprendizaje automático requieren datos de entrenamiento de entrada. El formato exacto puede diferir, pero en su forma más básica, los datos de entrada toman la forma de ejemplos y características.</p>
+</section>
+<section id="pensando-en-los-tipos-de-algoritmos-de-aprendizaje-automático" class="level3">
+<h3 class="anchored" data-anchor-id="pensando-en-los-tipos-de-algoritmos-de-aprendizaje-automático"><strong>Pensando en los tipos de algoritmos de aprendizaje automático</strong></h3>
+<p>Los algoritmos de aprendizaje automático se pueden dividir en dos grupos principales: estudiantes supervisados que se usan para construir modelos predictivos y estudiantes no supervisados que se usan para construir modelos descriptivos.</p>
+<p>El modelo predictivo se usa para tareas que involucran, como su nombre lo indica, la predicción de un valor usando otros valores en el conjunto de datos. El algoritmo de aprendizaje intenta descubrir y modelar la relación entre los objetivos característica. Los modelos predictivos reciben instrucciones claras sobre lo que necesitan aprender y cómo deben aprenderlo, el proceso de entrenamiento de un modelo predictivo se conoce como aprendizaje supervisado.</p>
+<p>El modelo descriptivo se utiliza para tareas que se beneficiarían de la información obtenida al resumir datos de formas nuevas e interesantes. De hecho, debido a que no hay un objetivo para aprender, el proceso de entrenamiento de un modelo descriptivo se llama aprendizaje sin supervisión. La tarea de modelado descriptivo de dividir un conjunto de datos en grupos homogéneos se llama agrupamiento.</p>
+</section>
+<section id="hacer-coincidir-sus-datos-con-un-algoritmo-apropiado" class="level3">
+<h3 class="anchored" data-anchor-id="hacer-coincidir-sus-datos-con-un-algoritmo-apropiado"><strong>Hacer coincidir sus datos con un algoritmo apropiado</strong></h3>
+<p>Para hacer coincidir una tarea de aprendizaje con un enfoque de aprendizaje automático, deberá comenzar con uno de los cuatro tipos de tareas: clasificación, predicción numérica, detección de patrones o agrupación. Para la clasificación, se necesita más pensamiento para hacer coincidir un problema de aprendizaje con un clasificador apropiado.</p>
+</section>
+<section id="uso-de-r-para-el-aprendizaje-automático" class="level3">
+<h3 class="anchored" data-anchor-id="uso-de-r-para-el-aprendizaje-automático"><strong>Uso de R para el aprendizaje automático</strong></h3>
+<p>R es un software gratuito de código abierto, no hay cargo adicional por esta funcionalidad. Una colección de funciones de R que se pueden compartir entre los usuarios se denomina paquete. Existen paquetes gratuitos para cada uno de los algoritmos de aprendizaje automático.</p>
+</section>
+<section id="instalación-y-carga-de-paquetes-r" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-y-carga-de-paquetes-r"><strong>Instalación y carga de paquetes R</strong></h3>
+<p>A pesar del amplio conjunto de complementos de R disponibles, el formato del paquete hace que la instalación y el uso sean un proceso prácticamente sin esfuerzo.</p>
+</section>
+<section id="instalación-de-un-paquete-r" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-de-un-paquete-r"><strong>Instalación de un paquete R</strong></h3>
+<p>La forma más directa de instalar un paquete es a través de install.packages () function. Para instalar el RWeka package, en el símbolo del sistema R simplemente escriba:</p>
+<p>&gt; install.packages (“RWeka”)</p>
+<p>R luego se conectará a CRAN y descargará el paquete en el formato correcto para su sistema operativo.</p>
+</section>
+<section id="instalación-de-un-paquete-mediante-la-interfaz-de-apuntar-y-hacer-clic" class="level3">
+<h3 class="anchored" data-anchor-id="instalación-de-un-paquete-mediante-la-interfaz-de-apuntar-y-hacer-clic"><strong>Instalación de un paquete mediante la interfaz de apuntar y hacer clic</strong></h3>
+<p>R proporciona una interfaz gráfica de usuario (GUI) para la instalación del paquete. En un sistema Microsoft Windows, se puede acceder desde el Install package(s)elemento de comando bajo el Packages menu, como se muestra en la siguiente captura de pantalla.</p>
+<p><img src="images/diagrama4.png" class="img-fluid"></p>
+</section>
+<section id="cargando-un-paquete-r" class="level3">
+<h3 class="anchored" data-anchor-id="cargando-un-paquete-r"><strong>Cargando un paquete R</strong></h3>
+<p>Para conservar la memoria, R no carga todos los paquetes instalados de forma predeterminada. En su lugar, los paquetes son cargados por los usuarios a medida que se necesitan utilizando el library( ) function.</p>
+</section>
+</section>
+<section id="capítulo-2-gestión-y-comprensión-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="capítulo-2-gestión-y-comprensión-de-datos">Capítulo 2: <strong>Gestión y comprensión de datos</strong></h2>
+<section id="estructura-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="estructura-de-datos"><strong>Estructura de datos</strong></h3>
+<p>Las estructuras de datos de R que se utilizan con mayor frecuencia en el aprendizaje automático son vectores, factores, listas, matrices y marcos de datos.</p>
+</section>
+<section id="vectores" class="level3">
+<h3 class="anchored" data-anchor-id="vectores"><strong>Vectores</strong></h3>
+<p>La estructura de datos fundamental de R es el vector, que almacena un conjunto ordenado de valores llamado elementos. Un vector puede contener cualquier número de elementos. Sin embargo, todos los elementos deben ser del mismo tipo; por ejemplo, un vector no puede contener tanto números como texto.</p>
+<p>Al vector también se le puede dar un nombre usando el operador de flecha &lt;-, que es el operador de asignación de R, usado de manera similar al operador de asignación = en muchos otros lenguajes de programación.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>nombre_sujeto <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"John Doe"</span>,<span class="st">"Jane Doe"</span>,<span class="st">"Steve Graves"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>temperatura <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">98.1</span>,<span class="fl">98.6</span>,<span class="fl">101.4</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>estado_gripe<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"FALSO"</span>,<span class="st">"FALSO"</span>,<span class="st">"VERDADERO"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Posterior a la creación de vectores, procedemos a llamarlos, dependiendo de lo que se necesite.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>temperatura[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 98.6</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>temperatura[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  98.6 101.4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>temperatura[<span class="sc">-</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  98.1 101.4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>temperatura[<span class="fu">c</span>(<span class="st">"VERDADERO"</span>,<span class="st">"VERDADERO"</span>,<span class="st">"FALSO"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA NA NA</code></pre>
+</div>
+</div>
+</section>
+<section id="factores" class="level3">
+<h3 class="anchored" data-anchor-id="factores"><strong>Factores</strong></h3>
+<p>Un factor es un caso especial de vector que se utiliza únicamente para representar variables nominales. Para crear un factor a partir de un personaje vector, simplemente aplique el factor ( )función. Por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sexo <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"MASCULINO"</span>,<span class="st">"MUJER"</span>,<span class="st">"MASCULINO"</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>sexo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] MASCULINO MUJER     MASCULINO
+Levels: MASCULINO MUJER</code></pre>
+</div>
+</div>
+<p>Cuando se crean factores, podemos agregar niveles adicionales que pueden no aparecer en los datos. Supongamos que agregamos otro factor para el tipo de sangre como se muestra en el siguiente ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sangre <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"O"</span>,<span class="st">"AB"</span>,<span class="st">"A"</span>),</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    niveles <span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"AB"</span>,<span class="st">"O"</span>))</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>sangre</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] O  AB A 
+Levels: A B AB O</code></pre>
+</div>
+</div>
+</section>
+<section id="lista" class="level3">
+<h3 class="anchored" data-anchor-id="lista"><strong>Lista</strong></h3>
+<p>Otro tipo especial de vector, una lista, se usa para almacenar un conjunto ordenado de valores. Sin embargo, a diferencia de un vector que requiere que todos los elementos sean del mismo tipo, una lista permite recopilar diferentes tipos de valores.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>nombre_sujeto[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "John Doe"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>temperatura[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 98.1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>estado_gripe[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "FALSO"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sexo[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] MASCULINO
+Levels: MASCULINO MUJER</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sangre[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] O
+Levels: A B AB O</code></pre>
+</div>
+</div>
+<p>Para poder facilitar los datos, las lista pueden ser una buena opción</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sujeto1 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">nombre_completo=</span>nombre_sujeto[<span class="dv">1</span>],<span class="at">temperatura=</span>temperatura[<span class="dv">1</span>],<span class="at">estado_gripe=</span>estado_gripe[<span class="dv">1</span>],<span class="at">sexo=</span>sexo[<span class="dv">1</span>],<span class="at">sangre=</span>sangre[<span class="dv">1</span>])</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>sujeto1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$nombre_completo
+[1] "John Doe"
+
+$temperatura
+[1] 98.1
+
+$estado_gripe
+[1] "FALSO"
+
+$sexo
+[1] MASCULINO
+Levels: MASCULINO MUJER
+
+$sangre
+[1] O
+Levels: A B AB O</code></pre>
+</div>
+</div>
+</section>
+<section id="marcos-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="marcos-de-datos"><strong>Marcos de datos</strong></h3>
+<p>El aprendizaje automático es el marco de datos, una estructura análoga a una hoja de cálculo o base de datos ya que tiene filas y columnas. Vamos a crear un marco de datos para nuestro conjunto de datos de pacientes. Usando los vectores de datos de pacientes que creamos previamente, data.frame( )la función los combina en un marco de datos:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>pt_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(nombre_sujeto,temperatura,estado_gripe,sexo,sangre,<span class="at">stringsAsFactors =</span><span class="cn">FALSE</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>pt_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  nombre_sujeto temperatura estado_gripe      sexo sangre
+1      John Doe        98.1        FALSO MASCULINO      O
+2      Jane Doe        98.6        FALSO     MUJER     AB
+3  Steve Graves       101.4    VERDADERO MASCULINO      A</code></pre>
+</div>
+</div>
+<p>Para extraer columnas enteras (vectores) de datos:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>pt_data<span class="sc">$</span>nombre_sujeto</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "John Doe"     "Jane Doe"     "Steve Graves"</code></pre>
+</div>
+</div>
+<p>También similar a las listas, se puede usar un vector de nombres para extraer varias columnas de un marco de datos:}</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>pt_data[<span class="fu">c</span>(<span class="st">"temperatura"</span>,<span class="st">"estado_gripe"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  temperatura estado_gripe
+1        98.1        FALSO
+2        98.6        FALSO
+3       101.4    VERDADERO</code></pre>
+</div>
+</div>
+<p>Para extraer el valor de la primera fila y la segunda columna del marco de datos del paciente (el valor de temperatura para John Doe), ingresaría:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>pt_data[<span class="dv">1</span>,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 98.1</code></pre>
+</div>
+</div>
+<p>Si desea más de una fila o columna de datos, puede hacerlo especificando vectores para los números de fila y columna que desea, por ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>pt_data[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">4</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  temperatura      sexo
+1        98.1 MASCULINO
+3       101.4 MASCULINO</code></pre>
+</div>
+</div>
+<p>Por ejemplo, para extraer todas las filas de la primera columna:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>pt_data[,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "John Doe"     "Jane Doe"     "Steve Graves"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>pt_data[<span class="dv">1</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  nombre_sujeto temperatura estado_gripe      sexo sangre
+1      John Doe        98.1        FALSO MASCULINO      O</code></pre>
+</div>
+</div>
+<p>Y para extraer todo, sería:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>pt_data[,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  nombre_sujeto temperatura estado_gripe      sexo sangre
+1      John Doe        98.1        FALSO MASCULINO      O
+2      Jane Doe        98.6        FALSO     MUJER     AB
+3  Steve Graves       101.4    VERDADERO MASCULINO      A</code></pre>
+</div>
+</div>
+</section>
+<section id="mátrices-y-arreglos" class="level3">
+<h3 class="anchored" data-anchor-id="mátrices-y-arreglos"><strong>Mátrices y arreglos</strong></h3>
+<p>Las matrices R pueden contener cualquier tipo de datos, aunque se usan con mayor frecuencia para operaciones matemáticas y, por lo tanto, normalmente almacenan solo datos numéricos. Para crear una matriz, simplemente suministre un vector de datos al matrix( ) función.</p>
+<p>NROW para solicitar que los parámetros se dividan en filas</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>),<span class="at">nrow=</span><span class="dv">2</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] "a"  "c" 
+[2,] "b"  "d" </code></pre>
+</div>
+</div>
+<p>NCOL para solicitar que los parámetros se dividan en columnas</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>),<span class="at">ncol=</span><span class="dv">2</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] "a"  "c" 
+[2,] "b"  "d" </code></pre>
+</div>
+</div>
+<p>De igual manera si se desea agregar más valores, en filas y colmnas sería:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>),<span class="at">nrow=</span><span class="dv">2</span>)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2] [,3]
+[1,] "a"  "c"  "e" 
+[2,] "b"  "d"  "f" </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>),<span class="at">ncol=</span><span class="dv">2</span>)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,] "a"  "d" 
+[2,] "b"  "e" 
+[3,] "c"  "f" </code></pre>
+</div>
+</div>
+</section>
+<section id="gestión-de-datos-con-r" class="level3">
+<h3 class="anchored" data-anchor-id="gestión-de-datos-con-r"><strong>Gestión de datos con R</strong></h3>
+<section id="guardar-y-cargar-estructuras-de-datos-r" class="level4">
+<h4 class="anchored" data-anchor-id="guardar-y-cargar-estructuras-de-datos-r"><strong>Guardar y cargar estructuras de datos R</strong></h4>
+<p>Para guardar una estructura de datos en particular en un archivo que pueda volver a cargarse más tarde o transferirse a otro sistema, puede usar save( ) función. Si tuviéramos tres objetos llamados x, y, z, podríamos guardarlos en un archivo misdatos.RData usando el siguiente comando:</p>
+<pre><code>
+#### **Importar y guardar datos de archivos CSV**
+
+Los archivos CSV se pueden importar y exportar desde muchas aplicaciones comunes. Un archivo CSV que represente el conjunto de datos médicos construido previamente tendría el siguiente aspecto, para cargar este archivo CSV en R, read.csv( ) se utiliza de la siguiente manera:
+
+
+#### **Importación de datos de bases de datos SQL** 
+
+ODBC es un protocolo estándar para conectarse a bases de datos independientemente del sistema operativo o SGBD(Sistema de administración de base de datos).
+
+#### **Exploración de datos**
+
+Dado que el conjunto de datos se almacena en formato CSV, podemos usar read.csv( ) función para cargar los datos en un marco de datos R:
+
+::: {.cell}
+
+```{.r .cell-code}
+usedcars &lt;- read.csv("usedcars.csv", stringsAsFactors = FALSE)</code></pre>
+<p>:::</p>
+</section>
+<section id="explorando-variables-numéricas" class="level4">
+<h4 class="anchored" data-anchor-id="explorando-variables-numéricas"><strong>Explorando variables numéricas</strong></h4>
+<p>Para investigar las variables numéricas en los datos de autos usados, emplearemos un conjunto de medidas de uso común para describir valores conocidos como resumen estadístico.</p>
+<p>The summary ( ) muestra varias estadísticas resumidas comunes, incluso si no está familiarizado con las estadísticas resumidas, es posible que pueda adivinar algunas de ellas a partir del encabezado.</p>
+</section>
+<section id="medición-de-la-tendencia-central-media-y-mediana" class="level4">
+<h4 class="anchored" data-anchor-id="medición-de-la-tendencia-central-media-y-mediana"><strong>Medición de la tendencia central: media y mediana</strong></h4>
+<p>Las medidas de tendencia central son una clase de estadísticas que se utilizan para identificar un valor que se encuentra en el medio de un conjunto de datos.&nbsp; En estadística, el promedio también se conoce como significar, una medida definida como la suma de todos los valores dividida por el número de valores.</p>
+<p>R también proporciona una mean( ) function, que calcula la media de un vector de números:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">36000</span>,<span class="dv">44000</span>,<span class="dv">56000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 45333.33</code></pre>
+</div>
+</div>
+<p>Otra medida de tendencia central de uso común es la mediana, que es el valor que aparece en la mitad de una lista ordenada de valores. Al igual que con la media, R proporciona median( ) function que podemos aplicar a nuestros datos salariales como se muestra en el siguiente ejemplo:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(<span class="fu">c</span>(<span class="dv">36000</span>,<span class="dv">44000</span>,<span class="dv">56000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 44000</code></pre>
+</div>
+</div>
+</section>
+<section id="medición-de-la-dispersión-cuartiles-y-el-resumen-de-cinco-números" class="level4">
+<h4 class="anchored" data-anchor-id="medición-de-la-dispersión-cuartiles-y-el-resumen-de-cinco-números"><strong>Medición de la dispersión: cuartiles y el resumen de cinco números</strong></h4>
+<p>Para medir la diversidad, necesitamos emplear otro tipo de estadísticas resumidas, o qué tan apretado o suelto están espaciados los valores. Conocer la dispersión proporciona una idea de los máximos y mínimos de los datos, y si la mayoría de los valores son similares o diferentes a la media y la mediana.</p>
+<p>El resumen de cinco números es un conjunto de cinco estadísticas que representan aproximadamente la dispersión de un conjunto de datos. Las cinco estadísticas se incluyen en el resultado del summary( ) función. Escritos en orden, son:</p>
+<p><img src="images/diagrama5.png" class="img-fluid"></p>
+<p>El lapso entre el valor mínimo y máximo se conoce como rango. En R, el range( ). La función devuelve tanto el valor mínimo como el máximo. Combinatorio range( )con la función diferencia ,diff( ) le permite examinar el rango de datos con un solo comando.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(usedcars<span class="sc">$</span>price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  3800 21992</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span>(<span class="fu">range</span>(usedcars<span class="sc">$</span>price))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 18192</code></pre>
+</div>
+</div>
+<p>Los cuartiles primero y tercero, Q1 y Q3, se refieren al valor por debajo o por encima del cual se encuentra una cuarta parte de los valores. Junto con la mediana (Q2), los cuartiles dividen un conjunto de datos en cuatro partes, cada una con el mismo número de valores.</p>
+<p>La diferencia entre Q1 y Q3 se conoce como rango intercuartil&nbsp; (IQR), y se puede calcular con la IQR( ) función:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(usedcars<span class="sc">$</span>price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3909.5</code></pre>
+</div>
+</div>
+<p>El quantile () proporciona una herramienta robusta para identificar cuantiles para un conjunto de valores. Por defecto, el quantile ( ), la función devuelve el resumen de cinco números.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(usedcars<span class="sc">$</span>price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     0%     25%     50%     75%    100% 
+ 3800.0 10995.0 13591.5 14904.5 21992.0 </code></pre>
+</div>
+</div>
+<p>Si especificamos un adicional problemas parámetro usando un vector que denota puntos de corte, podemos obtener cuantiles arbitrarios, como los percentiles 1 y 99:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quantile</span>(usedcars<span class="sc">$</span>price, <span class="at">probs=</span><span class="fu">c</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      1%      99% 
+ 5428.69 20505.00 </code></pre>
+</div>
+</div>
+</section>
+<section id="visualización-de-variables-numéricas-diagramas-de-caja" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-de-variables-numéricas-diagramas-de-caja"><strong>Visualización de variables numéricas: diagramas de caja</strong></h4>
+<p>La visualización de variables numéricas puede ser útil para diagnosticar muchos problemas con los datos. Una visualización común del resumen de cinco números es un diagrama de caja o caja y bigotes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(usedcars<span class="sc">$</span>price, <span class="at">main=</span><span class="st">"Boxplot de Precios de autos usados"</span>, <span class="at">ylab=</span><span class="st">"Precio($)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Resumen1_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(usedcars<span class="sc">$</span>mileage, <span class="at">main=</span><span class="st">"Boxplot of Used car millage"</span>, <span class="at">ylab=</span><span class="st">"Odometer(mi.)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Resumen1_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="visualización-de-variables-numéricas-histogramas" class="level4">
+<h4 class="anchored" data-anchor-id="visualización-de-variables-numéricas-histogramas"><strong>Visualización de variables numéricas – histogramas</strong></h4>
+<p>Los histogramas son otra forma de representar gráficamente la dispersión de una variable numérica. Es similar a un diagrama de caja en que divide los valores de la variable en un número predefinido de porciones, o contenedores que actúan como contenedores de valores. Un histograma utiliza cualquier número de contenedores de idéntico ancho, pero permite que los contenedores contengan diferentes números de valores.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(usedcars<span class="sc">$</span>price, <span class="at">main=</span><span class="st">"Histogram os Used cars prices"</span>, <span class="at">xlab=</span><span class="st">"Price($)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Resumen1_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(usedcars<span class="sc">$</span>mileage, <span class="at">main=</span><span class="st">"Histogram os Used cars Mileage"</span>, <span class="at">xlab=</span><span class="st">"Odometer(mi.)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Resumen1_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>También puede notar que la forma de los dos histogramas es algo diferente. Parece que los precios de los autos usados tienden a dividirse equitativamente a ambos lados del medio, mientras que el kilometraje de los autos se extiende más hacia la derecha.</p>
+<p>Esta característica se conoce como sesgar, específicamente sesgo a la derecha, porque los valores en el extremo superior (lado derecho) están mucho más dispersos que los valores en el extremo inferior (lado izquierdo).</p>
+</section>
+<section id="comprensión-de-datos-numéricos-distribuciones-uniformes-y-normales" class="level4">
+<h4 class="anchored" data-anchor-id="comprensión-de-datos-numéricos-distribuciones-uniformes-y-normales"><strong>Comprensión de datos numéricos: distribuciones uniformes y normales</strong></h4>
+<p>Los histogramas, los diagramas de caja y las estadísticas que describen el centro y la dispersión proporcionan formas de examinar la distribución de los valores de una variable. La distribución de una variable describe la probabilidad de que un valor caiga dentro de varios rangos. Una distribución uniforme es fácil de detectar con un histograma porque las barras tienen aproximadamente la misma altura, es importante tener en cuenta que no todos los eventos aleatorios son uniformes.</p>
+<p>La distribución normal es cuando parece que es menos probable que ocurran valores a medida que se alejan de ambos lados de la barra central, lo que da como resultado una distribución de datos en forma de campana.</p>
+</section>
+<section id="medición-de-la-dispersión-varianza-y-desviación-estándar" class="level4">
+<h4 class="anchored" data-anchor-id="medición-de-la-dispersión-varianza-y-desviación-estándar"><strong>Medición de la dispersión: varianza y desviación estándar</strong></h4>
+<p>La distribución normal, que describe muchos tipos de datos del mundo real, se puede definir con solo dos: centro y dispersión. El centro de la distribución normal se define por su valor medio, que hemos utilizado antes. La propagación se mide mediante una estadística llamada Desviación Estándar.Para calcular la desviación estándar, primero debemos obtener la diferencia, que se define como la media de las diferencias al cuadrado entre cada valor y el valor medio.</p>
+<p>Para obtener la varianza y la desviación estándar en R, se pueden utilizar las siguientes funciones:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(usedcars<span class="sc">$</span>price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9749892</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(usedcars<span class="sc">$</span>price)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3122.482</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(usedcars<span class="sc">$</span>mileage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 728033954</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(usedcars<span class="sc">$</span>mileage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 26982.1</code></pre>
+</div>
+</div>
+</section>
+<section id="explorando-variables-categóricas" class="level4">
+<h4 class="anchored" data-anchor-id="explorando-variables-categóricas"><strong>Explorando variables categóricas</strong></h4>
+<p>A diferencia de los datos numéricos, los datos categóricos se examinan mediante tablas en lugar de estadísticas de resumen. Una tabla que presenta una sola variable categórica se conoce como tabla unidireccional.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(usedcars<span class="sc">$</span>year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 
+   3    1    1    1    3    2    6   11   14   42   49   16    1 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(usedcars<span class="sc">$</span>model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ SE SEL SES 
+ 78  23  49 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(usedcars<span class="sc">$</span>color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ Black   Blue   Gold   Gray  Green    Red Silver  White Yellow 
+    35     17      1     16      5     25     32     16      3 </code></pre>
+</div>
+</div>
+<p>R también puede realizar el cálculo de las proporciones de la tabla directamente usando el prop.table ( ).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>model.table <span class="ot">&lt;-</span> <span class="fu">table</span>(usedcars<span class="sc">$</span>model)</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(model.table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+       SE       SEL       SES 
+0.5200000 0.1533333 0.3266667 </code></pre>
+</div>
+</div>
+</section>
+<section id="medición-de-la-tendencia-central-la-moda" class="level4">
+<h4 class="anchored" data-anchor-id="medición-de-la-tendencia-central-la-moda"><strong>Medición de la tendencia central: la moda</strong></h4>
+<p>La moda de una característica es el valor que ocurre con mayor frecuencia. Al igual que la media y la mediana, la moda es otra medida de tendencia central. A menudo se usa para datos categóricos, ya que la media y la mediana no están definidas para variables nominales.</p>
+<p>Pensar en las modas como valores comunes nos permite aplicar el concepto de moda estadística a los datos numéricos. Estrictamente hablando, sería poco probable tener una moda para una variable continua, ya que es probable que no se repitan dos valores. Sin embargo, si pensamos en las modas como las barras más altas de un histograma, podemos analizar las modas de variables.</p>
+</section>
+<section id="explorando-relaciones-entre-variables" class="level4">
+<h4 class="anchored" data-anchor-id="explorando-relaciones-entre-variables"><strong>Explorando relaciones entre variables</strong></h4>
+<ul>
+<li>Visualización de relaciones: diagramas de dispersión</li>
+</ul>
+<p>El gráfico de dispersiones un diagrama que visualiza una relación bi variada. Es una figura bidimensional en la que se dibujan puntos en un plano de coordenadas utilizando los valores de una característica para proporcionar la horizontal, X coordenadas, Y. Los patrones en la ubicación de los puntos revelan asociaciones subyacentes entre las dos características.</p>
+<p>El comando completo para crear nuestro diagrama de dispersión es:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>usedcars<span class="sc">$</span>mileage, <span class="at">y=</span>usedcars<span class="sc">$</span>price, <span class="at">main=</span><span class="st">"Scatterplot of Price vs. Mileage"</span>,<span class="at">xlab=</span><span class="st">"Used Car Odometer (mi.)"</span>, <span class="at">ylab=</span><span class="st">"Used Car Price ($)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Resumen1_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>La fuerza de una asociación lineal entre dos variables se mide mediante una estadística conocida como correlación.</p>
+</section>
+<section id="examen-de-las-relaciones-tabulaciones-cruzadas-de-dos-factores" class="level4">
+<h4 class="anchored" data-anchor-id="examen-de-las-relaciones-tabulaciones-cruzadas-de-dos-factores"><strong>Examen de las relaciones: tabulaciones cruzadas de dos factores</strong></h4>
+<p>Para examinar una relación entre dos variables nominales, una tabulación cruzada de dos vías se utiliza (también conocido como tabulación cruzada o contingencia mesa). Una tabulación cruzada es similar a un diagrama de dispersión en el sentido de que le permite examinar cómo los valores de una variable varían según los valores de otra.</p>
+<p>El formato es una tabla en la que las filas son los niveles de una variable mientras que las columnas son los niveles de otra. Los conteos en cada una de las celdas de la tabla indican el número de valores que caen en la combinación particular de fila y columna.</p>
+<p>Crearemos una variable indicadora binaria:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("gmodels")</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>usedcars<span class="sc">$</span>conservative <span class="ot">&lt;-</span> usedcars<span class="sc">$</span>color <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Black"</span>,<span class="st">"Gray"</span>,<span class="st">"Silver"</span>,<span class="st">"White"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(usedcars<span class="sc">$</span>conservative)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+FALSE  TRUE 
+   51    99 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(<span class="at">x=</span> usedcars<span class="sc">$</span>model, <span class="at">y=</span> usedcars<span class="sc">$</span>conservative)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ 
+   Cell Contents
+|-------------------------|
+|                       N |
+| Chi-square contribution |
+|           N / Row Total |
+|           N / Col Total |
+|         N / Table Total |
+|-------------------------|
+
+ 
+Total Observations in Table:  150 
+
+ 
+               | usedcars$conservative 
+usedcars$model |     FALSE |      TRUE | Row Total | 
+---------------|-----------|-----------|-----------|
+            SE |        27 |        51 |        78 | 
+               |     0.009 |     0.004 |           | 
+               |     0.346 |     0.654 |     0.520 | 
+               |     0.529 |     0.515 |           | 
+               |     0.180 |     0.340 |           | 
+---------------|-----------|-----------|-----------|
+           SEL |         7 |        16 |        23 | 
+               |     0.086 |     0.044 |           | 
+               |     0.304 |     0.696 |     0.153 | 
+               |     0.137 |     0.162 |           | 
+               |     0.047 |     0.107 |           | 
+---------------|-----------|-----------|-----------|
+           SES |        17 |        32 |        49 | 
+               |     0.007 |     0.004 |           | 
+               |     0.347 |     0.653 |     0.327 | 
+               |     0.333 |     0.323 |           | 
+               |     0.113 |     0.213 |           | 
+---------------|-----------|-----------|-----------|
+  Column Total |        51 |        99 |       150 | 
+               |     0.340 |     0.660 |           | 
+---------------|-----------|-----------|-----------|
+
+ </code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
